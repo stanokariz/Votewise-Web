@@ -40,6 +40,8 @@ const trustedOrigins = [
   "http://localhost:3000",
   "https://votewise-ke.vercel.app",
   "votewisemobile://",
+  // The deployment's own site URL (SITE_URL), e.g. https://votewise.sautistack.africa
+  ...(siteUrl ? [siteUrl] : []),
 ];
 
 const authFunctions: AuthFunctions = internal.auth;
